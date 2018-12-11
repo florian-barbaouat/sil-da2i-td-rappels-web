@@ -1,0 +1,51 @@
+h1{
+	text-align:center
+}
+
+.menu{
+	display:inline;
+}
+
+body{
+	background-color: #95afc0;
+	margin: 20px;
+	text-align:center;
+}
+.list-images img{
+	height: 50%;
+	width: 50%;
+
+}
+.people {
+	justify-content: center;
+}
+.people img{
+	height:25%;
+	width: 25%;
+}
+@media only screen and (max-width: 1000px){
+
+.people img{
+	height:50%;
+	width:50%;
+}
+
+}
+.people aside{
+
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: #c7ecee;
+}
+.infos aside {
+	float:right;
+}
+ul {
+	list-style:none;
+	margin-left:0;
+	padding-left:0;
+}
+ul li:hover{
+	background-color: #7ed6df;
+}
