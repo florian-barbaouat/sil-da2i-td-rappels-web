@@ -55,3 +55,6 @@ ul li:hover{
 dd{
 	display: none;
 }
+dd.persistent{
+	display: block!important;
+}

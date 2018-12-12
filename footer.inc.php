@@ -3,6 +3,21 @@
 </footer>
 <script>
 	$(document).ready(function() {
+		$("#charger").on('click',function(){
+			$.ajax({
+				method:"GET",
+				url: "faq.php",
+				datatype:"html"
+			}).done(function(faq){
+				console.log("bite");
+				$("#charger").parent().html(faq);
+			});
+		});
+
+
+
+
+
 		 $('#hideaside').on('click', function(){
 			 	$('aside').hide(2000);
 		 });

@@ -1,3 +1,4 @@
+<?php sleep(1); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -38,9 +39,19 @@
 <script>
 	$(document).ready(function() {
     $("dt").on('mouseenter',function(event){
-      console.log('ttrdtrdtrd');
+      $('dd').each(function(){
+        $(this).hide();
+      });
       $(this).next("dd").toggle();
       event.stopPropagation();
+    });
+    $("dt").on('click',function(){
+      var typecl = $(this).next("dd").attr('class');
+      if(typecl == 'persistent'){
+      $(this).next("dd").removeClass("persistent");
+    } else {
+      $(this).next("dd").addClass("persistent");
+    }
     });
   });
 </script>

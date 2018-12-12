@@ -21,9 +21,11 @@ $rating = $result['rating'];
   <time datetime="1980"><?php echo $data['releasedate']?></time>
   <p> les acteurs principaux sont : <?php echo $mainactor ?> ...</p></p>
   <p><?php echo $data['synopsis']?></p>
-  <aside>
-    <p>Note : <?php echo $data['rating']?>/5
-    <meter id="note" min="0" max="5" value="4">Note : 4/5</meter>
+  <p>Note : <?php echo $data['rating']?>/5
+  <meter id="note" min="0" max="5" value="4">Note : 4/5</meter>
   </p>
+  <aside>
+    <a id="charger" href="#">Charger</a>
+
   </aside>
 </section>
