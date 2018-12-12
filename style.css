@@ -1,7 +1,10 @@
 h1{
 	text-align:center
 }
-
+img{
+	height: 25%;
+	width: 25%;
+}
 .menu{
 	display:inline;
 }
@@ -12,8 +15,8 @@ body{
 	text-align:center;
 }
 .list-images img{
-	height: 50%;
-	width: 50%;
+	height: 25%;
+	width: 25%;
 
 }
 .people {
@@ -48,4 +51,7 @@ ul {
 }
 ul li:hover{
 	background-color: #7ed6df;
+}
+dd{
+	display: none;
 }

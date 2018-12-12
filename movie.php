@@ -5,8 +5,7 @@ function getBlock($file, $data = [])
 }
 require('connexion.php');
 
-?>
-<?php
+
 $id = $_GET['film'];
 $stmt = $bdd->prepare("SELECT * FROM movie WHERE id=".$id);
 $stmt->execute();

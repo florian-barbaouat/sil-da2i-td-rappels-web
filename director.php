@@ -1,18 +1,26 @@
 <?php
-require('connect.php');
-require('getblock.php');
+require('connexion.php');
+function getBlock($file, $data = [])
+{
+    require $file;
+}
 
 $id = $_GET['id'];
 $stmt = $bdd->prepare("SELECT * FROM person WHERE id=".$id);
 $stmt->execute();
 $res = $stmt->fetch();
 
-getblock('head.php') ?>
+getBlock('header.inc.php') ?>
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>    
+<link rel="stylesheet" type="text/css" href="style.css">
 <body>
-	<?php getblock("header.php") ?>
 <main>
-	<?php getblock("infosdirector.php", $res) ?>
+	<?php getBlock("infosdirector.php", $res) ?>
 </main>
-	<?php getblock("footer.php") ?>
+	<?php getBlock("footer.inc.php") ?>
 </body>
 </html>

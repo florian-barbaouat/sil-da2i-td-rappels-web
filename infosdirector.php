@@ -2,7 +2,7 @@
 		<article>
 		<aside>
 			<figure>
-			  <img src="director.jpg" alt="image d'affiche du film Silent Hill"></img>
+			  <img src="images/Kuku.jpg" alt="image d'affiche du film Silent Hill"></img>
 			  <figcaption>Christophe Grans</figcaption>
 			</figure>
 		</aside>

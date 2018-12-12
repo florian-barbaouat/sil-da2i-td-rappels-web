@@ -4,8 +4,7 @@ function getBlock($file, $data = [])
     require $file;
 }
 require('connexion.php');
-?>
-<?php
+
 
 //films
 $stmt = $bdd->prepare("SELECT * FROM movie ORDER BY title ASC");
@@ -15,6 +14,9 @@ $movies = $stmt->fetchAll();
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title><?php echo $res['title']; ?></title>
     <meta charset="utf-8"/>
@@ -39,7 +41,7 @@ $movies = $stmt->fetchAll();
     echo "<h2> Liste des réalisateurs : </h2>";
     echo "<ul>";
     foreach($directors as $director) {
-          $stmt = $bdd->prepare("SELECT * FROM person WHERE id =".$director['idPerson']);
+          $stmt = $bdd->prepare("SELECT * FROM person WHERE id =".$director['idperson']);
           $stmt->execute();
           $dir = $stmt->fetch();
           $url = 'director.php?id='.$dir['id'];
@@ -48,6 +50,6 @@ $movies = $stmt->fetchAll();
     echo "</ul>";
 ?>
 	</main>
-	<?php getblock("footer.inc.php") ?>
+	<?php getBlock("footer.inc.php") ?>
 </body>
 </html>
